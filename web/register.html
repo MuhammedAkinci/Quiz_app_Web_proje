@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html>
+<head>
+    
+     <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title></title>
+	<link rel="stylesheet" type="text/css" href="style.css">
+
+</head>
+<body>
+	<center>
+		<div class="register-central-div">
+                    <form action="controller.jsp" onsubmit="return keyDown(event);">
+                        <input type="hidden" name="page" value="register"> 
+				<table>
+					<tr>
+						<td colspan="2">
+							<center><h2>Register New User</h2></center>
+						</td>
+					</tr>
+					<tr>
+						<td>
+							
+						</td>
+						<td>
+                                                    <input required type="text" name="fname" class="text" placeholder="First Name">
+						</td>
+					</tr>
+					<tr>
+						<td>
+							
+						</td>
+						<td>
+                                                    <input required type="text"  name="lname" class="text" placeholder="Last Name">
+						</td>
+					</tr>
+					
+					<tr>
+						<td>
+							
+						</td>
+						<td>
+                                                    <input required type="text" name="uname" class="text" placeholder="User Name">
+						</td>
+					</tr>
+					<tr>
+						<td>
+							
+						</td>
+						<td>
+                                                    <input required type="email" name="email" class="text" placeholder="Email">
+						</td>
+					</tr>
+					
+					<tr>
+						<td>
+							
+						</td>
+						<td>
+                                                    <input id="password" required type="password" name="pass" class="text" placeholder="Password">
+						</td>
+					</tr>
+                                        <tr>
+						<td>
+							
+						</td>
+						<td>
+                                                    <input required type="text" name="contactno" class="text" placeholder="Contact No">
+						</td>
+					</tr>
+                                        <tr>
+						<td>
+							
+						</td>
+						<td>
+                                                    <input required type="text" name="city" class="text" placeholder="City">
+						</td>
+					</tr>
+                                        <tr>
+						<td>
+							
+						</td>
+						<td>
+                                                    <input required type="text" name="address" class="text" placeholder="Address">
+						</td>
+					</tr>
+					<tr>
+						<td>
+						</td>
+						<td>
+							<center>
+							
+							<input type="submit" value="Register Now" class="button">
+							</center>
+						</td>
+					</tr>
+				</table>
+			</form>
+		</div>
+	</center>
+
+     <script>
+         function keyDown(event) {
+            var passwordInput = document.getElementById('password');
+            var password = passwordInput.value;
+
+            // Özel karakterleri kontrol et
+            var specialChars = /[öğüşıçÖĞÜŞİÇ\s.,~?\/]/;
+
+            if (specialChars.test(password)) {
+                alert('Şifrenizde özel karakter (ö,ğ,ü,ş,ç, boşluk, nokta, virgül, tilde, soru işareti, eğik çizgi) bulunamaz.');
+                passwordInput.value = ''; // Şifreyi temizle
+                return false; // Formun submit işlemini durdur
+            }
+            return true; // Formu submit et
+        }
+        
+        
+//        keyDown(event);
+        
+    </script>
+
+ 
+</body>
+</html>

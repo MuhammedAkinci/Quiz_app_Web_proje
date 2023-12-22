@@ -36,7 +36,7 @@ public class DatabaseClass {
     private void establishConnection() throws ClassNotFoundException, SQLException {
        
             Class.forName("com.mysql.jdbc.Driver");
-            conn= DriverManager.getConnection("jdbc:mysql://auth-db581.hstgr.io:3306/u997127893_QuizApp","u997127893_quizApp","Eziko007");
+            conn= DriverManager.getConnection("jdbc:mysql://auth-db581.hstgr.io:3306/u997127893_Exam_System","u997127893_exam","Eziko007");
        
     }    
     public ArrayList getAllUsers(){

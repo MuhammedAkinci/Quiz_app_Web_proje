@@ -3,4 +3,5 @@ Our QuizApp project will allow students to do their online transactions. It is a
 People who contributed to the project:
 
 Aziz Amiraslanov | Full-Stack Developer
+
 Muhammed Akıncı | Full-Stack Developer
